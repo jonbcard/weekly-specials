@@ -1,5 +1,18 @@
-<div class="hero-unit">
-  <h1>The Weekly Specials</h1>
-  <p>Letting you find and share the best daily restaraunt specials in town!</p>
-  <h3>Coming soon!</h3>
+<div class="navbar">
+    <div class="navbar-inner">
+        <a class="brand" href="#">The Weekly Specials</a>
+        <ul class="nav">
+            <li ng-repeat="day in daysOfWeek" ng-class="{active: $index==selectedDay}">
+                <a ng-click="onSelectDay($index)">{{day}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <h4>Food deals for {{daysOfWeek[selectedDay]}}:</h4>
+        </div>
+    </div>
 </div>
