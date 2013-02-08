@@ -14,5 +14,8 @@
         <div class="span12">
             <h4>Food deals for {{daysOfWeek[selectedDay]}}:</h4>
         </div>
+        <ul>
+            <li ng-repeat="deal in dealsShown"><b>{{deal.vendor}}: </b>{{deal.lead}}</li>
+        </ul>
     </div>
 </div>
