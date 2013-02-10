@@ -7,7 +7,8 @@
   },
   "dependencies": {
     "express": "3.1.0",
-    "passport": "~0.1.12",
+    "passport": ">= 0.0.0",
+    "passport-google": ">= 0.0.0",
     "jade": "*"
   }
 }
