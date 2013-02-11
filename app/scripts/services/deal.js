@@ -4,14 +4,17 @@ weeklySpecialsApp.factory('deal', function() {
 
     // Mock deal JSON
     var deals = [
-        {id:'10000', city:1, vendor: 'Brewsters | Oliver Square', address: '11620 104th Avenue',
+        {id:10000, city:1, vendor: 'Brewsters | Oliver Square', address: '11620 104th Avenue',
             day: 1, lead: "Steak Sandwich - $12.99",
-            detail: "$3 lower than menu price.",
+            detail: '$3 lower than menu price.',
             score:1002, votes: 1203},
-        {id:'10001', city:1, vendor: 'Brewsters | Oliver Square', address: '11620 104th Avenue',
+        {id:10001, city:1, vendor: 'Brewsters | Oliver Square', address: '11620 104th Avenue',
             day: 1, lead: "Big Brewskis - $7.99",
-            detail: "Is this a good deal? No idea..",
-            score:220, votes: 302}
+            detail: 'Is this a good deal? No idea..',
+            score:220, votes: 302},
+        {id:10002, city:1, vendor: 'Louisiana Purchase', address: '10320 111 St',
+            day: 1, lead: 'Louisiana Jambalaya - $10',
+            detail: '$6 off the dinner price for the Louisana Jambalaya.'}
     ];
 
     return {
