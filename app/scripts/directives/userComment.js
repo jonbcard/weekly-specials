@@ -13,12 +13,20 @@ weeklySpecialsApp.directive('userComment', function () {
             comment: '='
         },
         template:
-            '',
+            '<div class="media user-comment">' +
+                '<a class="pull-left" ng-click="onClickUser(comment.user.id)"><gravatar md5="comment.user.gravatarHash" size="42"></gravatar></a>' +
+                '<div class="media-body">' +
+                '<div class="media-heading">' +
+                '<strong>{{comment.user.displayName}}</strong><span class="muted"> commented:</span></muted> ' +
+                '<div class="pull-right muted"><i class="icon-comment"></i> {{comment.date}}</div>' +
+                '</div>' +
+                '{{comment.text}}</div>' +
+            '</div>',
         link: function(scope, elem, attrs) {
-            var md5 = scope.md5 || stringUtil.md5(scope.email),
-                queryString = attrs.size ? ('?s=' + attrs.size) : '';
-            scope.url = 'http://www.gravatar.com/avatar/' + md5 + queryString;
-
+            scope.onUserProfile = function(userId) {
+                // TODO
+                console.log(userId);
+            }
         }
     };
 });

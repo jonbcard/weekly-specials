@@ -5,6 +5,8 @@ weeklySpecialsApp.controller('MainCtrl', function($scope, $routeParams, $locatio
   $scope.selectedDay = $routeParams.selectedDay || new Date().getDay();
   $scope.city = 1;
 
+  $scope.testComments = deal.getDealCommentsPaginated(10002);
+
   $scope.onSelectDay = function(index){
     $location.search('selectedDay', index);
     $scope.selectedDay = index;

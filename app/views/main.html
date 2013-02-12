@@ -13,10 +13,11 @@
     <div class="row">
         <div class="span12">
             <h4>Food deals for {{daysOfWeek[selectedDay]}}:</h4>
+
+            <ul>
+                <li ng-repeat="deal in dealsShown"><b>{{deal.vendor}}: </b>{{deal.lead}}</li>
+            </ul>
+            <user-comment ng-repeat="comment in testComments" comment="comment"></user-comment>
         </div>
-        <ul>
-            <li ng-repeat="deal in dealsShown"><b>{{deal.vendor}}: </b>{{deal.lead}}</li>
-        </ul>
-        <gravatar email="'jon.card@gmail.com'" size="48"></gravatar>
     </div>
 </div>

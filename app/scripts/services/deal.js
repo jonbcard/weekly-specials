@@ -41,8 +41,25 @@ weeklySpecialsApp.factory('deal', function() {
          *    This is a paginated resource, so further comment records
          *    can be loaded from the returned object.
          */
-        loadComments: function(dealId) {
+        getDealCommentsPaginated: function(dealId) {
+            // mocked in!
+            return [
+                {   user:{
+                        id:1023,
+                        displayName:'jonbcard',
+                        gravatarHash:'52bf24015955a3ce237647fdf8119eac'},
+                    date: '2013-02-11',
+                    text: 'Pretty tasty Jambalaya, and nice atmosphere. Reservation might not be a bad idea for this one.'
+                },
+                {   user:{
+                        id:1023,
+                        displayName:'jonbcard',
+                        gravatarHash:'52bf24015955a3ce237647fdf8119eac'},
+                    date: '2013-02-10',
+                    text: 'Want to try this!'
+                },
 
+            ]
         }
     };
 });
