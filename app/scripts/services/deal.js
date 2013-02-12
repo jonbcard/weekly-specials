@@ -49,7 +49,8 @@ weeklySpecialsApp.factory('deal', function() {
                         displayName:'jonbcard',
                         gravatarHash:'52bf24015955a3ce237647fdf8119eac'},
                     date: '2013-02-11',
-                    text: 'Pretty tasty Jambalaya, and nice atmosphere. Reservation might not be a bad idea for this one.'
+                    text: 'Pretty tasty Jambalaya, and nice atmosphere. Reservation might not be a bad idea for this one. '
+                            + ' And my comment is long enough to go on two lines!'
                 },
                 {   user:{
                         id:1023,

@@ -1,4 +1,4 @@
-weeklySpecialsApp.directive('userComment', function () {
+weeklySpecialsApp.directive('userComment', function ($parse) {
     /**
      * Display the gravatar for the given email (usually provided as a MD5 hash).
      */
@@ -13,20 +13,25 @@ weeklySpecialsApp.directive('userComment', function () {
             comment: '='
         },
         template:
-            '<div class="media user-comment">' +
+            '<div class="media" ng-style="cssBorder">' +
                 '<a class="pull-left" ng-click="onClickUser(comment.user.id)"><gravatar md5="comment.user.gravatarHash" size="42"></gravatar></a>' +
                 '<div class="media-body">' +
                 '<div class="media-heading">' +
                 '<strong>{{comment.user.displayName}}</strong><span class="muted"> commented:</span></muted> ' +
-                '<div class="pull-right muted"><i class="icon-comment"></i> {{comment.date}}</div>' +
+                '<div class="pull-right muted">{{comment.date}}</div>' +
                 '</div>' +
                 '{{comment.text}}</div>' +
             '</div>',
         link: function(scope, elem, attrs) {
-            scope.onUserProfile = function(userId) {
-                // TODO
-                console.log(userId);
+            if(scope.noBorder) {
+                scope.cssBorder = {borderBottomStyle:'none'};
             }
+
+            scope.onUserProfile = function(userId) {
+
+            }
+
+
         }
     };
 });

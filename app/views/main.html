@@ -12,12 +12,12 @@
 <div class="container">
     <div class="row">
         <div class="span12">
-            <h4>Food deals for {{daysOfWeek[selectedDay]}}:</h4>
+            <h3>Food Deals for {{daysOfWeek[selectedDay]}}:</h3>
 
-            <ul>
-                <li ng-repeat="deal in dealsShown"><b>{{deal.vendor}}: </b>{{deal.lead}}</li>
+            <ul class="media-list">
+                <deal-summary ng-repeat="deal in dealsShown" deal="deal"></deal-summary>
             </ul>
-            <user-comment ng-repeat="comment in testComments" comment="comment"></user-comment>
+
         </div>
     </div>
 </div>
