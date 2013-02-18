@@ -1,6 +1,3 @@
-.editorconfig
-.sass-cache/
-.idea/
-temp
-dist
-node_modules/
+intermediate/
+publish/
+temp/

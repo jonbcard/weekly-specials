@@ -4,9 +4,7 @@ var express = require('express')
 
 var security = {
     initialize: function() {
-        var port = 3001,
-            host = 'localhost'
-            baseUrl = 'http://' + host + ':' + port;
+
 
         passport.serializeUser(function(user, done) {
             done(null, user);

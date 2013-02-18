@@ -1,4 +1,4 @@
-weeklySpecialsApp.directive('gravatar', function (stringUtil) {
+app.directive('gravatar', function (stringUtil) {
     /**
      * Display the gravatar for the given email (usually provided as a MD5 hash).
      */

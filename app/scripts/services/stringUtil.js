@@ -1,6 +1,6 @@
 'use strict';
 
-weeklySpecialsApp.factory('stringUtil', function() {
+app.factory('stringUtil', function() {
 
     return {
         /**

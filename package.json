@@ -2,6 +2,8 @@
   "author": "",
   "name": "",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+      "passport-google": ">= 0.0.0"
+  },
   "devDependencies": {}
 }

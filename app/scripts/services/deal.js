@@ -1,6 +1,6 @@
 'use strict';
 
-weeklySpecialsApp.factory('deal', function() {
+app.factory('deal', function() {
 
     // Mock deal JSON
     var deals = [
@@ -33,6 +33,7 @@ weeklySpecialsApp.factory('deal', function() {
          */
         getTopDealsPaginated: function(cityId, dayId, filters) {
             // mocked in for now
+            console.log('getting deals for ' + cityId + ', ' + dayId);
             return _.where(deals, {city: cityId, day: dayId});
         },
         /**

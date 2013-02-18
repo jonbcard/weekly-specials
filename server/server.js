@@ -32,17 +32,7 @@ security.initialize();
 app.get('/login', security.login);
 app.get('/logout', security.logout);
 
-app.get('/auth/google',
-    passport.authenticate('google', { failureRedirect: '/login' }),
-    function(req, res) {
-        res.redirect('/');
-    });
 
-app.get('/auth/google/return',
-    passport.authenticate('google', { failureRedirect: '/login' }),
-    function(req, res) {
-        res.redirect('/');
-    });
 
 
 app.get('/users', ensureAuthenticated, user.list);

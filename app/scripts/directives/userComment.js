@@ -1,4 +1,4 @@
-weeklySpecialsApp.directive('userComment', function ($parse) {
+app.directive('userComment', function ($parse) {
     /**
      * Display the gravatar for the given email (usually provided as a MD5 hash).
      */

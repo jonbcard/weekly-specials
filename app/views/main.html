@@ -11,6 +11,11 @@
 
 <div class="container">
     <div class="row">
+        <div class="pull-right">
+            <select ng-model="city" ng-options="c.id as c.name for c in cities"></select>
+        </div>
+    </div>
+    <div class="row">
         <div class="span12">
             <h3>Food Deals for {{daysOfWeek[selectedDay]}}:</h3>
 

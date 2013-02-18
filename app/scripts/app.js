@@ -1,6 +1,6 @@
 'use strict';
 
-var weeklySpecialsApp = angular.module('weeklySpecialsApp', [])
+var app = angular.module('weeklySpecialsApp', [])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/login.html', {
@@ -18,13 +18,13 @@ var weeklySpecialsApp = angular.module('weeklySpecialsApp', [])
       });
   }]);
 
-weeklySpecialsApp.value("daysOfWeek",
+app.value("daysOfWeek",
     ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']);
 
 /**
  * Citiies. This will of course ultimately get
  */
-weeklySpecialsApp.value("cities",
+app.value("cities",
     {id: 1,
      name: 'Edmonton',
      areas:[

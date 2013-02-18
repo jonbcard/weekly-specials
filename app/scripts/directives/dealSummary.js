@@ -1,4 +1,4 @@
-weeklySpecialsApp.directive('dealSummary', function (deal) {
+app.directive('dealSummary', function (deal) {
     return {
         restrict:'E',
         replace:true,

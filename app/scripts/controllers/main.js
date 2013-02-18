@@ -1,9 +1,13 @@
-'use strict';
-
-weeklySpecialsApp.controller('MainCtrl', function($scope, $routeParams, $location, daysOfWeek, deal ) {
+app.controller('MainCtrl', function($scope, $routeParams, $location, city, daysOfWeek, deal ) {
   $scope.daysOfWeek = daysOfWeek;
   $scope.selectedDay = $routeParams.selectedDay || new Date().getDay();
-  $scope.city = 1;
+
+  $scope.cities = city.all();      // promise
+  $scope.city = 0;
+
+  city.detectCity().then(function(cityId){
+    $scope.city = cityId;
+  });
 
   $scope.testComments = deal.getDealCommentsPaginated(10002);
 
@@ -12,7 +16,10 @@ weeklySpecialsApp.controller('MainCtrl', function($scope, $routeParams, $locatio
     $scope.selectedDay = index;
   };
 
-  $scope.$watch('selectedDay', function(day){
-    $scope.dealsShown = deal.getTopDealsPaginated($scope.city, day);
-  })
+  $scope.$watch('selectedDay', updateDeals);
+  $scope.$watch('city', updateDeals);
+
+  function updateDeals() {
+    $scope.dealsShown = deal.getTopDealsPaginated($scope.city, $scope.selectedDay);
+  }
 });
