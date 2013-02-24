@@ -1,8 +1,27 @@
 @import "compass_twitter_bootstrap";
 
 body {
-  margin-top: 40px;
   background-color: #f5f5f5;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.masthead {
+
+  .signin {
+    line-height:64px;
+  }
+
+  // User profile button
+  .btn-profile {
+    margin-top: 8px;
+  }
+
+  .btn .caret {
+    margin-top: 14px;
+  }
 }
 
 .form-signin {

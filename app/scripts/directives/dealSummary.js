@@ -7,7 +7,8 @@ app.directive('dealSummary', function (deal) {
         },
         template:
             '<li class="media deal-summary">' +
-                '<a class="pull-left"><img src="http://placehold.it/64x64"></a>' +
+                /* For now, omitting any pictures! */
+                /* '<a class="pull-left"><img src="http://placehold.it/64x64"></a>' +  */
                 '<div class="media-body">' +
                 '<h4 class="media-heading">{{deal.lead}} <div class="pull-right">{{deal.vendor}} ({{deal.address}})</div></h4>' +
                 '{{deal.detail}}' +

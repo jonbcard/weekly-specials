@@ -1,3 +1,5 @@
 intermediate/
 publish/
 temp/
+.idea/
+.sass-cache/

@@ -1,6 +1,5 @@
 <div class="navbar">
     <div class="navbar-inner">
-        <a class="brand" href="#">The Weekly Specials</a>
         <ul class="nav">
             <li ng-repeat="day in daysOfWeek" ng-class="{active: $index==selectedDay}">
                 <a ng-click="onSelectDay($index)">{{day}}</a>
@@ -11,8 +10,13 @@
 
 <div class="container">
     <div class="row">
-        <div class="pull-right">
-            <select ng-model="city" ng-options="c.id as c.name for c in cities"></select>
+        <div class="pull-right" ng-show="!changeCity">
+            Edmonton <a class="muted" ng-click="changeCity=true">(change city)</a>
+        </div>
+        <div class="pull-right" ng-show="changeCity">
+            Select city: <select ng-model="city"
+                                 ng-options="c.id as c.name for c in cities"
+                                 ng-change="changeCity=false"></select>
         </div>
     </div>
     <div class="row">

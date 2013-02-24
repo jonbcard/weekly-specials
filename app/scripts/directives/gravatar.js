@@ -25,7 +25,7 @@ app.directive('gravatar', function (stringUtil) {
             size: '@'
         },
         template:
-            '<img ng-src="{{url}}">',
+            '<img ng-src="{{url}}" class="img-rounded">',
         link: function(scope, elem, attrs) {
             var md5 = scope.md5 || stringUtil.md5(scope.email),
                 queryString = attrs.size ? ('?s=' + attrs.size) : '';

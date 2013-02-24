@@ -7,7 +7,9 @@ module.exports = function(app){
   });
 
   app.get('/api/city/:id', function(req, res) {
-    res.send('You hit an ExpressJS route with ' + req.params.id);
+    res.send({
+
+    });
   });
 
   app.post('/api/citys', function(req, res) {
