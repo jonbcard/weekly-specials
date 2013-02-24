@@ -9,6 +9,12 @@ app.directive('dealSummary', function (deal) {
             '<li class="media deal-summary">' +
                 /* For now, omitting any pictures! */
                 /* '<a class="pull-left"><img src="http://placehold.it/64x64"></a>' +  */
+                '<div class="pull-right">' +
+                '<div><div class="btn-group btn-group-vertical">' +
+                '<button class="btn"><i class="icon-thumbs-up icon-large"></i></button>' +
+                '<button class="btn"><i class="icon-thumbs-down icon-large"></i></button>' +
+                '</div></div>' +
+                '</div>' +
                 '<div class="media-body">' +
                 '<h4 class="media-heading">{{deal.lead}} <div class="pull-right">{{deal.vendor}} ({{deal.address}})</div></h4>' +
                 '{{deal.detail}}' +

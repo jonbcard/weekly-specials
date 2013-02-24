@@ -3,3 +3,4 @@ publish/
 temp/
 .idea/
 .sass-cache/
+node_modules/

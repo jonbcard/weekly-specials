@@ -1,6 +1,7 @@
 var express = require('express'),
     passport = require('passport'),
-    GoogleStrategy = require('passport-google').Strategy;
+    GoogleStrategy = require('passport-google').Strategy,
+    FacebookStrategy = require('passport-facebook').Strategy;;
 
 
 module.exports = function(app){
