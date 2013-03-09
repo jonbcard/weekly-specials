@@ -12,16 +12,7 @@ app.directive('userComment', function ($parse) {
              */
             comment: '='
         },
-        template:
-            '<div class="media" ng-style="cssBorder">' +
-                '<a class="pull-left" ng-click="onClickUser(comment.user.id)"><gravatar md5="comment.user.gravatarHash" size="42"></gravatar></a>' +
-                '<div class="media-body">' +
-                '<div class="media-heading">' +
-                '<strong>{{comment.user.displayName}}</strong><span class="muted"> commented:</span></muted> ' +
-                '<div class="pull-right muted">{{comment.date}}</div>' +
-                '</div>' +
-                '{{comment.text}}</div>' +
-            '</div>',
+        templateUrl: 'scripts/directives/userComment.html',
         link: function(scope, elem, attrs) {
             if(scope.noBorder) {
                 scope.cssBorder = {borderBottomStyle:'none'};
